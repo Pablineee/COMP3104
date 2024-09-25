@@ -5,7 +5,7 @@ node_js:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: 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
+  github_token: $GITHUB_TOKEN
   local_dir: build
   on:
     branch: master
