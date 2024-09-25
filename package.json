@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Warning: No tests created yet.\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablineee/COMP3104.git"
+  },
   "keywords": [],
   "author": "Pablo Arango Gomez",
   "license": "ISC"
