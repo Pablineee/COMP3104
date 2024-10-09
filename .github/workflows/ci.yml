@@ -26,6 +26,11 @@ jobs:
       - name: Run test
         run: npm run test
 
+      - name: Set Git Identity
+        run: |
+          git config --global user.email "jpagomez@outlook.com"
+          git config --global user.name "Pablo Arango Gomez"
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
