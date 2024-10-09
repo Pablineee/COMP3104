@@ -1,8 +1,6 @@
 name: Deploy React App
 
 on:
-  push:
-    branches: [ "dep-inclusions" ]
   pull_request:
     branches: [ "master" ]
 
@@ -21,6 +19,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set Identity
+        run: git config --global user.email "jpagomez@outlook.com"
+        run: git config --global user.name "Pablo Arango Gomez"
 
       - name: Build the app
         run: npm run build
