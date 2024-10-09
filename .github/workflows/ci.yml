@@ -1,9 +1,7 @@
 name: Deploy React App
 
 on:
-  pull_request:
-    branches:
-      - [ "master" ] # Adjust this to your main branch name if necessary
+  pull_request: [ "master" ]
 
 jobs:
   build:
