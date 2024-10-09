@@ -1,7 +1,7 @@
 name: Deploy React App
 
 on:
-  pull_request:
+  push:
     branches: [ "master" ]
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x' # Use the appropriate Node.js version for your project
+          node-version: '20.x'
 
       - name: Install dependencies
         run: npm install
@@ -23,10 +23,15 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      - name: Run test
+      - name: Run tests
         run: npm run test
+
+      - name: Set Git Identity (Locally)
+        run: |
+          git config user.email "jpagomez@outlook.com"
+          git config user.name "Pablo Arango Gomez"
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}
