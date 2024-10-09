@@ -2,7 +2,9 @@ name: COMP3104 Repository CI
 run-name: ${{ github.actor }} is currently utilizing GitHub Actions
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - "master"
+      - "dep-inclusions"
   pull_request:
     branches: [ "master" ]
 jobs:
