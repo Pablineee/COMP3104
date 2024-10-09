@@ -1,7 +1,12 @@
 name: Deploy React App
 
 on:
-  pull_request: [ "master" ]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
