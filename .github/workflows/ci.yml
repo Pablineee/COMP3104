@@ -20,12 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set Identity Email
-        run: git config --global user.email "jpagomez@outlook.com"
-
-      - name: Set Identity Name
-        run: git config --global user.name "Pablo Arango Gomez"
-
       - name: Build the app
         run: npm run build
 
