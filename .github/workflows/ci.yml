@@ -3,6 +3,8 @@ name: Deploy React App
 on:
   push:
     branches: [ "master" ] 
+  pull_request:
+    branches: [ "dep-inclusions" ]
 
 jobs:
   build:
